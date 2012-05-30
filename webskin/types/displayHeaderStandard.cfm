@@ -22,6 +22,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
+
 	<link rel="stylesheet" type="text/css" href="/css/960_12_col.css"></link>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"></link>
 
