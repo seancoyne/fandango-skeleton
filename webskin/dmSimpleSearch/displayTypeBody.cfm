@@ -6,24 +6,22 @@
 
 <cfparam name="url.q" default="">
 
-
+<!--- do search --->
+<cfset stLocal.qResults = queryNew("objectid")>
 <cfif len(url.q)>
-	<!--- do search --->
 	<cfset stLocal.qResults = search(url.q)>
+</cfif>
+
+<!--- display search message --->
+<cfif len(url.q)>
+	<cfoutput>
+		<p>Your search for "#url.q#" returned #stLocal.qResults.recordCount# results.</p>
+	</cfoutput>
 <cfelse>
-	<cfset stLocal.qResults = queryNew("objectid")>
 	<cfoutput>
-		<p>To perform a search, type some terms into the search box and press Enter.</p>
+		<p>To perform a search, type some keywords into the search box and press Enter.</p>
 	</cfoutput>
 </cfif>
-
-<!--- no results --->
-<cfif len(url.q) AND stLocal.qResults.recordCount eq 0>
-	<cfoutput>
-		<p>Your search for "#url.q#" returned 0 results.</p>
-	</cfoutput>
-</cfif>
-
 
 <!--- display results --->
 <cfloop query="stLocal.qResults">

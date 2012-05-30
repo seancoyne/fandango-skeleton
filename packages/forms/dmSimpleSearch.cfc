@@ -10,11 +10,11 @@
 		<cfquery name="qResults" datasource="#application.dsn#">
 			SELECT objectid, typename, SUM(relevance) AS relevance
 			FROM (
-				SELECT objectid, 'dmHTML' AS typename, 10 AS relevance FROM dmHTML WHERE title LIKE <cfqueryparam cfsqltype="cf_sql_varchar" value="%#arguments.q#%">
+				SELECT objectid, 'dmHTML' AS typename, 10 AS relevance FROM dmHTML WHERE lower(title) LIKE <cfqueryparam cfsqltype="cf_sql_varchar" value="%#lcase(arguments.q)#%">
 				UNION
-				SELECT objectid, 'dmHTML' AS typename, 7 AS relevance FROM dmHTML WHERE teaser LIKE <cfqueryparam cfsqltype="cf_sql_varchar" value="%#arguments.q#%">
+				SELECT objectid, 'dmHTML' AS typename, 7 AS relevance FROM dmHTML WHERE lower(teaser) LIKE <cfqueryparam cfsqltype="cf_sql_varchar" value="%#lcase(arguments.q)#%">
 				UNION
-				SELECT objectid, 'dmHTML' AS typename, 5 AS relevance FROM dmHTML WHERE body LIKE <cfqueryparam cfsqltype="cf_sql_varchar" value="%#arguments.q#%">
+				SELECT objectid, 'dmHTML' AS typename, 5 AS relevance FROM dmHTML WHERE lower(body) LIKE <cfqueryparam cfsqltype="cf_sql_varchar" value="%#lcase(arguments.q)#%">
 			) results
 			GROUP BY objectid, typename
 			ORDER BY relevance DESC
