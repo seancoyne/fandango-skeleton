@@ -22,6 +22,9 @@
 <cfset THIS.dbOwner = "" /> 
 <cfset THIS.plugins = "farcrycms" /> 
 
+<cfset THIS.bUseDeviceDetection = true /> 
+<cfset THIS.bUseMobileWebskins = true /> 
+
 
 <!--- 
 THE VIRTUAL WEBSERVER PROJECT FOLDER

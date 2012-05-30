@@ -28,6 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css"></link>
 
 	<skin:loadJS id="jquery" />
+	<skin:loadJS id="farcry-devicetype" />
 
 </head>
 

@@ -430,6 +430,13 @@ footer p {
 footer p.poweredby {
 	margin: 25px 0 0 0;
 }
+footer p.switch {
+	margin-top: 12px;
+}
+footer p.switch a {
+	color: #777;
+	text-shadow: none
+}
 
 #footernav {
 	margin: 0;

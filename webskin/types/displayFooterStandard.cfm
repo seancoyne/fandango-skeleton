@@ -14,6 +14,9 @@
                 <p class="poweredby">
                     <a href="http://www.farcrycore.org"><img src="/css/images/poweredby.png" alt="Powered by FarCry Core"></a>
                 </p>
+                <p class="switch">
+                    <a href="" class="fc-switch-device-mobile">View Mobile Site</a>
+                </p>
             </div>
             <div class="grid_2">
                 <skin:genericNav navID="#application.fapi.getNavID("home")#" id="footernav" depth="1" bActive="true" bIncludeHome="true" />
