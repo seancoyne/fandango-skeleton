@@ -26,7 +26,7 @@
 	<div id="main">
 		<div class="container_12">
 			<div class="grid_12 content">
-				<skin:view typename="#stobj.typename#" objectid="#stobj.objectid#" webskin="#url.bodyView#" />
+				<con:container label="#stObj.objectID#_Body_Bottom" />
 			</div>
 		</div>
 	</div>
